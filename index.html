@@ -1,202 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
         body
         {
             margin: 0;
             padding: 0;
+            font-family: 'inter', sans-serif;
+            color: white;
+            background-color: black;
+        }
+
+        /*    home     */
+        header
+        {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin-top: -17px;
+        }
+
+        /*     navigation bar    */
+        .nam
+        {
+            width: 100%;
+            display: ;
+            justify-content: space-around;
+            padding: 35px;
+        }
+
+        .logo
+        {
+            font-size: 40px;
+            padding: 50px;
+            position: absolute;
+            font-weight: bolder;
+        }
+        .logo span
+        {
+            color: green;
+        }
+        .nav ul
+        {
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+            padding: 20px 50px;
+        }
+        .nav li
+        {
+            list-style: none;
+            margin: 10px;
+            padding: ;
+        }
+        .nav a
+        {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+        }
+        .nav a:hover
+        {
+            border-bottom: 3px solid white;
+            color: green;
+        }
+
+        .profile
+        {
             display: none;
         }
 
-        h3
-        {
-            margin: 10px;
-            text-align: left;
-            font-size: 25px;
-        }
-
-        h1
-        {
-            text-align: center;
-            font-size: 45px;
-            font-style: initial;
-        }
-
-        p
-        {
-            text-align: center;
-            font-style: oblique;
-        }
-
-        a
-        {
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .head, .projects, .about, .foot
-        {
-            margin: 3px;
-            border-top: 2px solid black;
-            border-bottom: 2px solid black;
-            padding: 20px;
-            width: auto;
-            text-align: center;
-        }
-
-        /*   head    */
-        .img1
-        {
-            height: 90px;
-            width: 90px;
-            position: absolute;
-            top: 10px;
-            left: 280px;
-
-        }
-
-        .img2
+        .home
         {
             margin-top: 30px;
-            height: 250px;
-            width: 250px;
-            border-radius: 125px;
-            box-shadow: 0px 5px 5px rgb(17, 153, 17);
+            text-align: center;
+            padding: 50px;
         }
-
-        /*   projects   */
-        .projects
+        .home h3
         {
-            padding: 3px;
-            width: auto;
-            border-bottom: 0;
+            font-size: 30px;
         }
-        .projects h3
+        .home h1
         {
-            padding-left: 10px;
+            font-size: 70px;
+            margin-top: -20px;
+            margin-bottom: -30px;
+            font-weight: bolder;
         }
-
-        .projects video
+        .home h1 span
         {
-            height: 300px;
-            width: 170px;
-            display: inline-block;
-            margin: 3px;
+            color: green;
         }
-
-        /*    side button   */
-        .button a
+        .home p
         {
-            color: black;
-            font-size: 35px;
-            padding: 10px 15px;
-            border-radius: 20px;
-            position: fixed;
-            background-color: skyblue;
-            bottom: 8px;
-            right: 8px;
-            border: 1px solid black;
-
-        }
-        .button a:hover
-        {
-            box-shadow: 3px 3px 3px green;
-            border: 2px solid black;
-        }
-
-        /*   foot   */
-        .foot
-        {
-            margin: 0;
-            border: 0;
-            background-color: rgb(87, 21, 21);
-            color: white;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-        .foot a
-        {
+            padding: 50px;
             font-size: 20px;
-            margin: 10px;
-            line-height: 30px;
+            font-weight: lighter;
+        }
+        .home a
+        {
+            text-decoration: none;
             color: white;
-        }
-        .foot a:hover
-        {
-            color: black;
-            background-color: skyblue;
-            padding: 3px 8px;
-            border-radius: 5px;
-        }
-        .foot p
-        {
+            border: 1px solid white;
+            padding: 20px 30px;
+            border-radius: 10px;
             font-size: 15px;
+            backdrop-filter: blur(5px);
+        }
+        .home a:hover
+        {
+            border: 0;
+            box-shadow: 2px 2px 20px 2px skyblue;
+            font-size: 18px;
         }
 
-        @media (min-width:310px) and (max-width:510px)
+        /*    content     */
+        .heading
         {
-            #box
+            padding: 10px 60px;
+        }
+        .heading h3
+        {
+            font-size: 90px;
+            color: green;
+            margin-bottom: -30px;
+        }
+        .heading span
+        {
+            font-size: 50px;
+            color: green;
+            margin: 0;
+        }
+
+        /*    vedios    */
+        .content
+        {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .card
+        {
+            background-color: rgb(28, 56, 28);
+            border-radius: 10px;
+            height: 540px;
+            width: 245px;
+            margin: 10px;
+            overflow: hidden;
+        }
+        .vid-frame
+        {
+            align-items: ;
+        }
+        .vid-frame iframe
+        {
+            border-radius: 10px 10px 0 0;
+            border: 0;
+            height: 430px;
+            width: 100%;
+        }
+        .card-info
+        {
+            text-align: center;
+        }
+
+        /* Footer */
+        footer
+        {
+            text-align: center;
+            padding: 20px;
+            background: #151515;
+        }
+        footer a:hover
+        {
+            color: green;
+        }
+        .email-link
+        {
+            padding: 10px 20px;
+            font-size: 35px;
+            color: white;
+            text-decoration: none;
+            font-weight: bolder;
+            display: block;
+            display: inline-block;
+        }
+        .email-link:hover
+        {
+            border-left: 3px solid white;
+            border-right: 3px solid white;
+
+        }
+
+        .socials
+        {
+            justify-content: space-evenly;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .socials a
+        {
+            padding: 10px;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+        .socials a:hover
+        {
+            margin: 13px;
+            border-bottom: 3px solid white;
+        }
+
+        .copyright
+        {
+            margin-top: 50px;
+        }
+        .copyright a
+        {
+            text-decoration: none;
+            color: white;
+            padding: px;
+        }
+        .copyright a:hover
+        {
+            padding: 5px;
+            margin: -5px;
+            border-bottom: 3px solid white;
+        }
+
+        /*   smart devices    */
+        @media (max-width:720px)
+        {
+            .nav
+            {
+                display: none;
+            }
+
+            header
+            {
+                margin-top: -30px;
+                padding: 20px;
+            }
+
+            .profile
             {
                 display: block;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: -30px;
+            }
+            .profile img
+            {
+                border-radius: 75px;
+                height: 150px;
+                width: 150px;
+            }
+
+            .home
+            {
+                padding: 20px;
+            }
+            .home h3
+            {
+                font-size: 20px;
+            }
+            .home h1
+            {
+                margin-top: 20px;
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+            .home h1 span
+            {
+                display: none;
+            }
+            .home p
+            {
+                padding: 0;
+                font-size: 15px;
+                font-weight: lighter;
+                margin-bottom: 40px;
+            }
+
+            /*     content     */
+            .heading
+            {
+                padding-left: 20px;
+                margin-top: -30px;
+            }
+            .heading h3
+            {
+                font-size: 50px;
+                margin-bottom: 4px;
+            }
+            .heading span
+            {
+                font-size: 35px;
+            }
+            .vid-frame iframe
+            {
+                border-radius: 10px 10px 0 0;
+            }
+            .card-info p
+            {
+                font-size: 12px;
+            }
+
+            /*     footer    */
+            .email-link
+            {
+                font-size: 23px;
             }
         }
 
     </style>
 </head>
-<body id="box">
-    <div class="head">
-        <h3>Profile:</h3>
-        <img class="img1" src="a1ca4050-5ef4-480e-9266-a1de099b7f23.png" alt="">
-        <img class="img2" src="1719915870485.jpg" alt="">
-        <h1>𝕄. 𝔸𝕓𝕕𝕦𝕝𝕝𝕒𝕙</h1>
-        <p>Videographer: &nbsp <strong>Abdullah</strong> Studio</p>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="logo">
+                MIRZA <span> EDITS</span>
+            </div>
+            <ul>
+                <li><a href="#work">Showcase</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="profile">
+            <img src="IMG_3282.jpg" alt="">
+        </div>
+
+        <div class="home">
+            <h3>Muhammad</h3>
+            <h1>ABDULLAH <span> Mirza </span> </h1>
+            <p>
+                Creative and detail-oriented Video Editor with over five years of experience
+                crafting high-impact visual narratives across digital platforms, commercials,
+                and short-form documentaries. Expert in Adobe Premiere Pro, After Effects,
+                and DaVinci Resolve, with a proven track record of transforming raw footage
+                into polished, broadcast-ready content. Adept at managing the entire
+                post-production workflow, including color grading, sound design,
+                and motion graphics, to enhance storytelling and audience engagement .....
+            </p>
+            <a href="#work">View Projects</a>
+        </div>
+    </header>
+
+    <div class="heading" id="work">
+        <h3>Recents</h3>
+        <span> - - - - - - - - - -</span>
     </div>
-    
-    <div class="about">
-        <h3>About:</h3>
-        <p>Hi ! &nbsp its Muhammad <strong>Abdullah</strong> Mirza from Pakistan. I am 22 years old. I have done I.Cs from Islamia Collage. Video editing is my passion and I realy enjoy my work. I am diong this from 2 years. I have done many projects with companies and indivisuals also .....</p>
-    </div>
-    
-    <div class="projects">
-        <h3>Projects</h3>
-        <br>
-        <video loop controls>
-            <source src="download (1).mp4">
-        </video>
-        <video loop controls>
-            <source src="ssstik.io_@rustamfathi009_1728056142255.mp4">
-        </video>
-        <video loop controls>
-            <source src="ssstik.io_@rustamfathi009_1728056508304.mp4">
-        </video>
-        <video loop controls>
-            <source src="video1.mp4">
-        </video>
-    </div>
-    <div class="button">
-        <a class="bi bi-whatsapp" href="https://wa.me/+923448864281"></a>
+    <div class="content">
+        <div class="card">
+            <div class="vid-frame">
+                <iframe src="vv7.mp4" &autoplay="0"></iframe>
+            </div>
+            <div class="card-info">
+                <h3>Brand Identity</h3>
+                <p>Color Grading | Sound Design</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="vid-frame">
+                <iframe src="v2.mp4" &autoplay="0"></iframe>
+            </div>
+            <div class="card-info">
+                <h3>Brand Identity</h3>
+                <p> Echo Enhance | Impresion</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="vid-frame">
+                <iframe src="vi2.mp4"></iframe>
+            </div>
+            <div class="card-info">
+                <h3>Brand Identity</h3>
+                <p>Dramatic Pacing | Continuity</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="vid-frame">
+                <iframe src="lv_0_20251228225615.mp4"></iframe>
+            </div>
+            <div class="card-info">
+                <h3>Brand Identity</h3>
+                <p>Fast-cut Narrative | VFX</p>
+            </div>
+        </div>
     </div>
 
-    <div class="foot">
-        <h3>Contact:</h3>
-        <div>
-            <a class="bi bi-tiktok" href="https://www.tiktok.com/@mirza.edit8?_t=8qn2dBk7iUb&_r=1"> Tiktok</a>
-            <a class="bi bi-linkedin" href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=abdullah-mirza-8177a7293"> Linkedin</a>
-            <a class="bi bi-instagram" href="https://www.instagram.com/mirza_edit_00/profilecard/?igsh=MTA5Y3I2bW8wbm54ZQ=="> Instagram</a>
-            <a class="bi bi-telephone" href="tel:+92 344 8864281"> Call</a>
-            <a class="bi bi-envelope" href="mailto:abdullahmiza9288@gmail.com"> Email</a>
+    <!----  foot  --->
+    <footer id="contact">
+        <h2>Let's Collaborate !</h2>
+        <p>Here we discuss your next project .....</p>
+        <a href="mailto:mirzaxeditz1@gmail.com" class="email-link">mirzaxeditz1@gmail.com</a>
+        <div class="socials">
+            <a class="bi bi-instagram" href="https://www.instagram.com/mirza_edit_00?igsh=MTA5Y3I2bW8wbm54ZQ=="> Instagram</a>
+            <a class="bi bi-whatsapp" href="https://wa.me/+923448864281"> Whatsapp</a>
+            <a class="bi bi-linkedin" href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=abdullah-mirza-8177a7293"> LinkedIn</a>
+            <a class="bi bi-tiktok" href="https://www.tiktok.com/@mirza.x.editz?_r=1&_t=ZN-950rlqoMIZH"> Tiktok</a>
+            <a class="bi bi-telephone" href="tel:+92 346 6709815"> Call</a>
         </div>
-        <br><br>
-        <div>
-            <p>Copyright <strong class="bi bi-c-circle"> Abdullah</strong> Studio. &nbsp All rights reserved 2024.</p>
-            <p class="bi bi-code"> Developer: <a href="https://www.linkedin.com/in/rehanahmad55?trk=contact-info"><strong class="">Ahmad</strong> Brothers</a></p>
+
+        <div class="copyright">
+        <p>
+            Copyright <strong class="bi bi-c-circle"> Abdullah</strong> Mirza. &nbsp All rights reserved 2026.</p>
+        </p>
+        <p>
+            <span class="bi bi-code">Developer : </span> &nbsp; &nbsp; <a href="https://linkedin.com/in/rehanahmad55"> Rehan Ahmad</a>
+        </p>
         </div>
-    </div>
-    
+    </footer>
+
 </body>
+
 </html>
